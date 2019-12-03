@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
-#"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump" -u root -p norman > "C:\Users\n.oshea\Desktop\tset\slack mine\BD.sql"
+# "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump" -u root -p norman > "C:\Users\n.oshea\Desktop\tset\slack mine\BD.sql"
 import mysql.connector
 import time
 import random
