@@ -1,0 +1,83 @@
+create database IF NOT EXIST norman;
+
+	use norman;
+
+	CREATE TABLE argentbet(
+		idbet int(255) PRIMARY KEY,
+		amountbet int(255));
+
+--DROP TABLE uti;
+CREATE TABLE uti(
+	id varchar(255),
+	score bigint(255),
+	pick int(255) DEFAULT 1,
+	idweapon int(255) DEFAULT 0,
+	health int(255) DEFAULT 20,
+	armor int(255) DEFAULT 0);
+
+CREATE TABLE utiWeapon(
+iduser varchar(255),
+idweapon varchar(255),
+CONSTRAINT PRIMARY KEY (iduser,idweapon));
+
+--INSERT INTO uti(id,score,pick) values('U6XF5PRC0',2075,6);
+drop table weaponlist;
+CREATE TABLE weaponlist(
+	id int(255),
+	name varchar(255),
+	damage int(255),
+	speed int(255),
+	hitChance double,
+	cost int(255),
+	dps double);
+--
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(0,'Fist',1,1,0.2,0,1);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(1,'Knife',1,2,0.9,100,0.5);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(2,'Dagger',1,2,0.9,400,0.5);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(3,'Hatchet',3,4,0.8,2700,0.75);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(4,'Felling Axe',6,10,0.8,9600,0.6);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(5,'Hand Scythe',5,5,0.7,12500,1.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(6,'Small Hammer',3,3,0.9,10800,1.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(7,'Spike Hammer',9,8,0.6,44100,1.125);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(8,'Great Axe',22,11,0.3,140800,2.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(9,'Scimitar',10,8,0.7,81000,1.25);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(10,'Bastard Sword',11,8,0.4,110000,1.375);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(11,'Large Scythe',13,13,0.5,157300,1.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(12,'Spear',6,4,0.8,86400,1.5);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(13,'Long Sword',9,6,0.9,152100,1.5);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(14,'Great Sword',16,10,0.6,313600,1.6);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(15,'Cutlass',9,5,0.8,202500,1.8);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(16,'Morning Star',11,11,0.3,281600,1.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(17,'Sabre',6,3,0.7,173400,2.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(18,'Whip',6,3,0.3,194400,2.);
+INSERT INTO weaponlist(id,name,damage,speed,hitchance,cost,dps) values(19,'Rapier',6,2,0.6,216600,3.);
+
+CREATE TABLE fightlist(
+	id serial PRIMARY KEY,
+	id1 varchar(255),
+	id2 varchar(255),
+	state int
+)
+
+
+
+
+CREATE TABLE historique_mining(
+	id varchar(255),
+	temps datetime DEFAULT NOW(),
+	type_action varchar(255));
+
+CREATE TABLE historique_killing(
+	id varchar(255),
+	temps datetime DEFAULT NOW(),
+	target varchar(255));
+
+
+
+
+INSERT INTO argentbet(idbet,amountbet) values(1,0);
+
+INSERT INTO uti(id,score,pick) values('U6XF5PRC0',2075,6)
+INSERT INTO uti(id,score,pick) values('U74PP1MR6',118588,5)
+INSERT INTO uti(id,score,pick) values('U7622KGLS',14,1)
+INSERT INTO uti(id,score,pick) values('U775K6XK9',4816,4)

@@ -1,1 +1,1 @@
-slackMine
+slack mine
