@@ -28,7 +28,7 @@ def minebet(sc,slack_message,mycursor,cnx,g):
 				sc.api_call("chat.postMessage",channel=slack_message.get("channel"),text="You won "+str(amount*2) +" gold")
 			else:
 				lessgold(mycursor,user[0],amount,cnx)
-				addjackpot(mycursor,cnx,int(amount*0.)5)
+				addjackpot(mycursor,cnx,int(amount*0.5))
 				sc.api_call("chat.postMessage",channel=slack_message.get("channel"),text="You lost "+str(amount) +" gold")
 				if getmegajacpot(mycursor) > 100:
 					minebet_jackpot(sc,slack_message,mycursor)
