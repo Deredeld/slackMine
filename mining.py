@@ -29,8 +29,8 @@ import datetime as dt
 def main():
 	config = {
 	  'user': 'norman',
-	  'password': 'root',
-	  'host': '127.0.0.1',
+	  'password': 'Slackmasterangers@',
+	  'host': '51.178.19.3',
 	  'database': 'norman',
 	  'raise_on_warnings': True,
 
